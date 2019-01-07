@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="Tendai Chikake" />
+  	<link rel="shortcut icon" href="/img/favicon.png">
+    <link rel="favicon" href="/img/favicon.png">
+    <!--lib css-->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/jquery-ui.min.css">
+
+    <!--custom css-->
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    <link rel="stylesheet" type="text/css" href="/css/sidemenu.css">
+
+    <!--[if lt IE 9]>
+        <script src="/js/libs/html5shiv.js"></script>
+    <![endif]-->
+
+    <!--fonts-->
+    <link rel="stylesheet" type="text/css" href="/font-awesome-4.7.0/css/font-awesome.min.css">
+    <title class="title"></title>  
+  </head>
+  <body>
+     <!-- navigation for small screens only -->
+     <div class="row">
+        <ul class="ham-container">
+            <li id="nav-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            </li>
+            <li class="ham-title text-right lead text-white pr-0">
+                <span class="lang ru appname">   
+                </span>
+                <span class="lang en appname" >
+                </span>
+            </li>
+        </ul>
+        <div class="sidemenu left">
+            <div class="list-group border-0 p-3 small-screen-nav">
+                <div>
+                    <span class="lang ru title"></span>
+                    <span class="lang en title"></span>
+                </div>
+            </div>
+            <form class="align-right form-inline col-sm-12">
+                <select class="form-control mr-sm-2 international">
+                    <option id="en">en</option>
+                    <option selected="selected" id="ru">ru</option>                
+                </select>
+            </form> 
+        </div>
+    </div>
+    <!-- end of small screen sidemenu -->
+    
+    <!-- big screen navigation -->
+    <nav class="navbar navbar-expand-md navbar-light nav-justified bg-white border border-primary border-top-0 border-left-0 border-right-0" id="main-nav">
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="nav navbar-nav mr-auto"></ul>
+            <ul class="navbar-nav col-md-10 col-sm-12 wide-screen-nav"> 
+                <li class="nav-item link-box">
+                    <span class="lang ru title"></span>
+                    <span class="lang en title"></span>
+                </li>               
+            </ul>
+            <!--Toggles languages-->
+            <form class="align-right form-inline col-md-2 col-sm-12">
+                <div class="form-group">
+                    <select class="form-control  international border-0">
+                        <option id="en">en</option>
+                        <option selected="selected" id="ru">ru</option>        
+                    </select>
+                </div>
+            </form>  
+         </div>
+    </nav>
+    <!-- end of big screen navigation -->  
+    <div class="container-fluid mb-5">
+        <div class="row">
+            <h4 class="col-12 mt-5">
+                <span class="lang ru app-description"></span>
+                <span class="lang en app-description"></span>
+            </h4>
+        </div>
+
+        <div class="row">
+            <div class="col-12 mt-5">
+            </div>
+        </div>
+    </div>
+    
+    <footer class="container-fluid fixed-bottom card mt-5">
+        <div class="row">        
+                <em class="col-9 text-right mt-3">
+                    &COPY;
+                    <span class="lang en title">
+                    </span>
+                    
+                    <span class="lang ru title">
+                    </span>
+                    <span class="copyright-date"></span> 
+                </em>  
+        </div>                  	
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <script src="/js/libs/prototypes.js"></script>
+    <script src="/js/libs/storage.js"></script>
+
+    <script src="/js/libs/jquery-ui.min.js"></script>
+          
+    <script src="/js/index.js"></script>
+    </body>
+</html>

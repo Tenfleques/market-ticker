@@ -1,0 +1,178 @@
+body{
+	background-color:#F8FEFE;
+}
+.cu-pointer{
+	cursor:pointer;
+}
+.hidden{
+	display:none !important;
+}
+.lang{
+	visibility: hidden;
+}
+.invisible{
+	visibility:hidden;
+}
+.main-filter{
+	cursor:pointer;
+}
+a:hover{
+	text-decoration:none;
+}
+.dropdown-item:hover{
+	text-decoration:none;
+	background-color:inherit;
+}
+.pad-tight{
+	/*position:absolute;*/
+	top:2px;
+	bottom:2px;
+	left:2px;
+	right:2px;
+}
+/*navigation links */
+.navbar-light .navbar-nav .nav-link, .dropdown-item {
+    color: #104591;
+}
+.navbar-light.navbar-nav.nav-link:hover, .dropdown-item:hover {
+	color:#0018A8;
+}
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color: #0018A8;
+}
+.link-box:hover{
+}
+.dropdown-menu {
+    min-width: 0px !important;
+}
+.link-goto.active{
+	color:rgb(133,16,18) !important ;
+}
+.page-link.active{
+	background-color: rgba(160, 160, 238, 0.19);
+}
+
+.fa-sort-down, .fa-sort-up, .activate-edit-task{
+	cursor: pointer;
+}
+/*navigation links */
+/*form elements */
+.form-control, button{
+	border-radius:0px;
+}
+textarea{
+	height:150px;
+}
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow:none;
+}
+/*form elements*/
+
+/*borders*/
+.border-jet-black{
+	border:thin;
+	border-color:#0a0a0a;
+	border-style:solid;
+}
+.overlay{
+	position:absolute;
+	top:0px;
+	bottom:0px;
+	left:0px;
+	right:0px;
+	width:100%;
+	z-index:10000;
+}
+.overdiv{
+	position:fixed;
+	top:0px;
+	bottom:0px;
+	left:0px;
+	right:0px;
+	width:100%;
+	z-index:10000;
+}
+
+.box-shadowed{
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+pre {
+    white-space: pre-wrap;       
+    white-space: -moz-pre-wrap;  
+    white-space: -pre-wrap;      
+    white-space: -o-pre-wrap;    
+    word-wrap: break-word;
+	font-size:16px;       
+}
+
+/*text*/
+
+/*borders*/
+.border-radius-0{
+	border-radius:0px !important;
+}
+/*borders**/
+/*backgrounds*/
+.bg-faint{
+	background-color:rgba(174, 174, 201, 0.493);
+}
+/*images */
+.img-logo{
+	position:absolute;
+	left:5px;
+	top:25px;
+	width:80px;
+	height:80px;
+}
+.h-200px{
+	height:200px;
+}
+.main-car{
+	height:200px;
+	width:480px;
+	overflow:hidden;
+ }
+/*internationale*/
+.lang-toggle > button{
+	background-color:transparent;
+	border:none;
+	cursor:pointer;
+}
+.lang-toggle > button:focus{
+	outline:0;
+	box-shadow:none;
+}
+.lang-toggle{
+	position:absolute;
+	right:0px;
+	top:5px;
+	width:100px;
+	height:100px;
+	z-index: 10000;
+}
+
+/*internationale*/
+/*images*/
+.image-upload > input{
+	display:none;
+}
+.click-open-file{
+	cursor:pointer;
+}
+/*images*/
+/*cards*/
+.card{
+	display: inline-block;
+	border-radius:0px;
+}
+.maxh-few-lines{
+	height : 120px;
+	max-height:120px;
+	overflow-y:hidden
+}
+/*cards*/
+
