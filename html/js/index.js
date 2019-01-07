@@ -10,7 +10,7 @@ function toggleSmallScreenNavControl(){
 		$("body").toggleClass("frozen");
 	});
 	// close navigation sidebar after sidemenu link click
-	$(".sidemenu.left").on("click",".link-goto",function(){
+	$(".sidemenu.left,.container-fluid").on("click",".link-goto",function(){
 		$("#nav-icon").toggleClass('open');
 		$(".ham-container").toggleClass("border border-left-0 border-right-0 border-dark open pr-4");
 		$(".left,.ham-title").toggleClass('open');
@@ -105,5 +105,7 @@ $(function(){
 		}
 		initInternationalization();
 	})
-	app.fail(ajaxExceptionhandler);	
+	app.fail(ajaxExceptionhandler);
+	toggleSmallScreenNavControl();	
+
 })

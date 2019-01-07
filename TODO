@@ -1,5 +1,5 @@
 html
-    form
+    form +
     table history
     chart chosen dates
 js

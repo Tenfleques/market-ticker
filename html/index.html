@@ -44,7 +44,7 @@
                 </span>
             </li>
         </ul>
-        <div class="sidemenu left">
+        <div class="sidemenu left pl-5">
             <div class="list-group border-0 p-3 small-screen-nav">
                 <div>
                     <span class="lang ru title"></span>
@@ -52,7 +52,7 @@
                 </div>
             </div>
             <form class="align-right form-inline col-sm-12">
-                <select class="form-control mr-sm-2 international">
+                <select class="form-control custom-select border-0 international">
                     <option id="en">en</option>
                     <option selected="selected" id="ru">ru</option>                
                 </select>
@@ -74,7 +74,7 @@
             <!--Toggles languages-->
             <form class="align-right form-inline col-md-2 col-sm-12">
                 <div class="form-group">
-                    <select class="form-control  international border-0">
+                    <select class="form-control custom-select border-0 international border-0">
                         <option id="en">en</option>
                         <option selected="selected" id="ru">ru</option>        
                     </select>
@@ -83,7 +83,7 @@
          </div>
     </nav>
     <!-- end of big screen navigation -->  
-    <div class="container-fluid mb-5">
+    <div class="content container-fluid mb-5">
         <div class="row">
             <h4 class="col-12 mt-5">
                 <span class="lang ru app-description"></span>
@@ -93,6 +93,53 @@
 
         <div class="row">
             <div class="col-12 mt-5">
+                <form class="needs-validation" novalidate>
+                    <div class="form-row">
+                        <div class="col-md-3 mb-3">
+                            <label for="company_symbol">
+                                <span class="lang en"></span>
+                                <span class="lang ru"></span>
+                            </label>
+                            <input type="text" class="form-control" id="company_symbol" placeholder="Company Symbol" required>
+                            <div class="invalid-feedback">
+                                
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="start_date">
+                                <span class="lang en"></span>
+                                <span class="lang ru"></span>
+                            </label>
+                            <input type="text" class="form-control" id="start_date" placeholder="YYYY-mm-dd" required>
+                            <div class="invalid-feedback">
+                                
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="end_date">
+                                <span class="lang en"></span>
+                                <span class="lang ru"></span>
+                            </label>
+                            <input type="text" class="form-control" id="end_date" placeholder="YYYY-mm-dd" required>
+                            <div class="invalid-feedback">
+                                
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="email">
+                                <span class="lang en"></span>
+                                <span class="lang ru"></span>
+                            </label>
+                            <input type="text" class="form-control" id="email" placeholder="ivan@ivanovic.ru" required>
+                            <div class="invalid-feedback">
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" type="submit">
+                        Submit form
+                    </button>
+                </form>
             </div>
         </div>
     </div>
@@ -119,5 +166,6 @@
     <script src="/js/libs/jquery-ui.min.js"></script>
           
     <script src="/js/index.js"></script>
+    <script src="/js/form.js"></script>
     </body>
 </html>
