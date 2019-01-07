@@ -1,0 +1,8 @@
+{
+    "mysql": {
+        "host" : "172.21.0.1",
+        "user" : "tendai_auth",
+        "password" : "%A9]+pL7hf4^ghfs476%%*",
+        "database" : "tendai_auth"
+    }    
+}

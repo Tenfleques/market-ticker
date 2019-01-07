@@ -1,0 +1,12 @@
+version: '3'
+services:
+  mysql:
+    build: ./database
+    ports:
+      - "3306:3306"
+  php-apache:
+    build: .
+    ports:
+      - "80:80"
+    volumes:
+      - ./:/var/www/
