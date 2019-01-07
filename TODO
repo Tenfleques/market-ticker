@@ -5,13 +5,13 @@ html
 js
     validate form fields
         dates
-            format (YYYY-mm-dd)
+            format (YYYY-mm-dd) +
             start-date <= end-date
         company symbol
             existence
         email
-            contains singular @
-            email regex
+            contains singular @ +
+            email regex +
     ajax 
         submit
         retrieve symbol
