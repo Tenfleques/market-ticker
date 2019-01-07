@@ -97,47 +97,39 @@
                     <div class="form-row">
                         <div class="col-md-3 mb-3">
                             <label for="company_symbol">
-                                <span class="lang en"></span>
+                                <span class="lang en">Company Symbol</span>
                                 <span class="lang ru"></span>
                             </label>
-                            <input type="text" class="form-control" id="company_symbol" placeholder="Company Symbol" required>
-                            <div class="invalid-feedback">
-                                <span class="lang en"></span>
-                                <span class="lang ru"></span>
-                            </div>
+                            <input type="text" class="form-control autocomplete text-uppercase" id="company_symbol" placeholder="Company Symbol" required>
+                            <small id="companyError" class="form-text text-danger">
+                            </small>
                         </div>
                         <div class="col-md-3 mb-3">
                             <label for="start_date">
-                                <span class="lang en"></span>
+                                <span class="lang en">Start Date</span>
                                 <span class="lang ru"></span>
                             </label>
                             <input type="text" class="form-control datepicker" id="start_date" placeholder="YYYY-mm-dd" required>
-                            <div class="invalid-feedback">
-                                <span class="lang en"></span>
-                                <span class="lang ru"></span>
-                            </div>
+                            <small id="startDateError" class="form-text text-danger">
+                            </small>
                         </div>
                         <div class="col-md-3 mb-3">
                             <label for="end_date">
-                                <span class="lang en"></span>
+                                <span class="lang en">End Date</span>
                                 <span class="lang ru"></span>
                             </label>
                             <input type="text" class="form-control datepicker" id="end_date" placeholder="YYYY-mm-dd" required>
-                            <div class="invalid-feedback">
-                                <span class="lang en"></span>
-                                <span class="lang ru"></span>
-                            </div>
+                            <small id="endDateError" class="form-text text-danger">
+                            </small>
                         </div>
                         <div class="col-md-3 mb-3">
                             <label for="email">
-                                <span class="lang en"></span>
+                                <span class="lang en">Email</span>
                                 <span class="lang ru"></span>
                             </label>
                             <input type="text" class="form-control" id="email" placeholder="ivan@ivanovic.ru" required>
-                            <div class="invalid-feedback">
-                                <span class="lang en"></span>
-                                <span class="lang ru"></span>
-                            </div>
+                            <small id="emailError" class="form-text text-danger">
+                            </small>
                         </div>
                     </div>
                     <button class="btn btn-primary" type="submit">
@@ -162,8 +154,8 @@
         </div>                  	
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <script src="/js/libs/jquery.min.js"></script>
+    <script src="/js/libs/bootstrap.min.js"></script>
     <script src="/js/libs/prototypes.js"></script>
     <script src="/js/libs/storage.js"></script>
 

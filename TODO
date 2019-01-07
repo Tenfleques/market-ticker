@@ -4,17 +4,17 @@ html
     chart chosen dates
 js
     validate form fields
-        dates
+        dates +
             format (YYYY-mm-dd) +
-            start-date <= end-date
-        company symbol
-            existence
-        email
+            start-date <= end-date +
+        company symbol +
+            existence +
+        email +
             contains singular @ +
             email regex +
     ajax 
         submit
-        retrieve symbol
+        retrieve symbol +
         use symbol, dates to api fetch dataset for chart
         draw and configure chart
 database
