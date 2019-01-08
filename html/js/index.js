@@ -23,8 +23,8 @@ function internationale(){
 	 */
 	var lang = getCookie("lang");
 	if(lang==""){
-		setCookie("lang","en",365);
-		lang = "en";
+		setCookie("lang","ru",365);
+		lang = "ru";
 	}			
 	$(".lang").addClass("hidden");
 	$(".lang").css("visibility","visible");
