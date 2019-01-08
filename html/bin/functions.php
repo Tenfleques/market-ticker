@@ -11,4 +11,16 @@ function sanitizeString($var){
     //$var = mysqli_real_escape_string($mysqli,$var);
     return $var;
 }
+const FORM_ERRORS = array(
+        "missing_value",
+        "malformed",
+        "year_out_of_range",
+        "month_out_of_range",
+        "day_out_of_range",
+        "back_from_the_future",
+        "date_before_start",
+        "date_after_end",
+        "error_email",
+        "unknown_symbol"
+);
 ?>

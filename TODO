@@ -1,7 +1,7 @@
 html
     form +
-    table history
-    chart chosen dates
+    table history +
+    chart chosen dates +
 js
     validate form fields
         dates +
@@ -13,10 +13,15 @@ js
             contains singular @ +
             email regex +
     ajax 
-        submit
+        submit +
+        server validation +
         retrieve symbol +
-        use symbol, dates to api fetch dataset for chart
+        use symbol, dates to api fetch dataset for chart +
         draw and configure chart
+php 
+    app details endpoint +
+    getSymbols endpoint +
+    getHistory endpoint +
 database
     table history 
         company_symbol, start_date, end_date, email +

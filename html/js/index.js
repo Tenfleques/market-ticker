@@ -29,7 +29,6 @@ function internationale(){
 	$(".lang").addClass("hidden");
 	$(".lang").css("visibility","visible");
 	$(".lang."+lang).removeClass("hidden");
-	$.datepicker.setDefaults( $.datepicker.regional[ "fr" ] ); //activate chosen language for the datepickers
 }	
 function toggleInternationale(){
 	/** 
@@ -108,5 +107,5 @@ $(function(){
 	})
 	app.fail(ajaxExceptionhandler);
 	toggleSmallScreenNavControl();	
-
+	internationale();
 })

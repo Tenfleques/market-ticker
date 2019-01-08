@@ -1,9 +1,9 @@
 {
     "name" : "markets",
-    "title" : "Infinite Web [markets]",
+    "title" : "Infinite Web [market]",
     "localTitle" : {
-        "en" : "Infinite Web [markets]",
-        "ru" : "Инфинити веб [рынки]"
+        "en" : "Infinite Web [market]",
+        "ru" : "Инфинити веб [рынок]"
     },
     "contacts" : {
         "en" : {
@@ -14,7 +14,7 @@
         }
     },
     "description": {
-        "en" : "Personalized markets watch",
-        "ru" : "Персонализированный просмотрщик рынков"
+        "en" : "markets watch",
+        "ru" : "просмотрщик рынков"
     }
 }

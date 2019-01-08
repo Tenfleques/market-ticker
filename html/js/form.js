@@ -1,6 +1,5 @@
 'use strict';
 $(function() {
-
     var FORM_ERRORS = {
         "en" : {
             "missing_value": "This field is required!",
@@ -12,7 +11,8 @@ $(function() {
             "date_before_start" : "Pick a date that is later than start date",
             "date_after_end" : "Pick a date that's before the end date ",
             "error_email" : "Input a valid email address",
-            "unknown_symbol": "The symbol supplied cannot be found!"
+            "unknown_symbol": "The symbol supplied cannot be found!",
+            "ok": ""
         },
         "ru" : {
             "missing_value": "Это поле обязательно к заполнению!",
@@ -24,7 +24,8 @@ $(function() {
             "date_before_start" : "Выберите дату, которая позже даты начала",
             "date_after_end" : "Выберите дату, предшествующую дате окончания ",
             "error_email" : "Введите действительный адрес электронной почты",
-            "unknown_symbol": "Поставленный символ не может быть найден!"
+            "unknown_symbol": "Поставленный символ не может быть найден!",
+            "ok":""
         }
     }
     function fieldShowError(){
@@ -209,12 +210,17 @@ $(function() {
         //do validation
         var validFields = [
             validDates(), 
-            validEmail.apply($("#email")),!
-            validSymbol.apply($("#company_symbol"))].reduce((a,b)=> a && b,true);
+            validEmail.apply($("#email")),
+            validSymbol.apply($("#company_symbol"))];
 
-        console.log(validFields);
-        if(validFields){
-                //send to server
+        var payload = {
+            "email" : $("#email").val(),
+            "company_symbol": $("#company_symbol").val(),
+            "start_date": $("#start_date").val(),
+            "end_date" : $("#end_date").val()
+        };
+        if(validFields.reduce((a,b)=> a && b,true)){ //load data when all tests are satisfied
+            loadData(payload);
         };
     }
 
@@ -224,6 +230,7 @@ $(function() {
          */
         dateActivate();//activates the date field 
         symbolsAssist(); //activates the symbols field
+        initTable();//initialize the table
 
         $(".form-control").on("input",function() { //clears errors on input on any field
             $(this).removeClass("border-danger");
