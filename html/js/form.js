@@ -231,6 +231,7 @@ $(function() {
         dateActivate();//activates the date field 
         symbolsAssist(); //activates the symbols field
         initTable();//initialize the table
+        loadChart();//init chart
 
         $(".form-control").on("input",function() { //clears errors on input on any field
             $(this).removeClass("border-danger");

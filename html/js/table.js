@@ -97,11 +97,12 @@ function loadData(payload){
     });
     tasks.fail(ajaxExceptionhandler);
 }
-function loadChart(rows){
+function loadChart(){
     /**
      * @args rows, gotten from getHist endpoint
      * loads the chart
      */
+    var rows = (arguments[0])?arguments[0]:[[],[]]
     var local = {
         "open" : {
             "en" : "Open",
