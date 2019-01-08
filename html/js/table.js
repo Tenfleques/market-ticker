@@ -1,8 +1,15 @@
 const $table = $('#table');
+var timer = null;
 function getHeight() {
+    /**
+     * aautomatically calculates height when window size change
+     */
     return $(window).height() - $('h1').outerHeight(true);
 }
 function openCloseCompare(value, row, index, field) {
+    /**
+     * compare dates on sorting the date column
+     */
     if(value < row.Open)
         return {classes: 'text-success'};
     if(value == row.Open)
@@ -70,6 +77,22 @@ function initTable() {
 function loadData(payload){
     var tasks = $.post("/bin/model/getHist/", payload);
     tasks.done(function(data){
+        console.log(data.code)
+        if(data.code != 200){
+            $(".response-info").removeClass("hidden");
+            $(".empty-response").addClass("hidden");
+        }else if(!data["market"].length){
+            $(".response-info").removeClass("hidden");
+            $(".error-params").addClass("hidden");
+        }
+        
+        if(timer){
+            clearTimeout(timer); 
+        }
+        timer = setTimeout(() => {
+            $(".response-info").addClass("hidden");
+        }, 10000);
+        
         $table.bootstrapTable('load', data["market"]);
         loadChart(data["chart"]);
     });
@@ -86,7 +109,7 @@ function loadChart(rows){
             "ru" : "Открытый"
         },
         "close" : {
-            "e" : "Close",
+            "en" : "Close",
             "ru" : "Закрытий"
         }
     };

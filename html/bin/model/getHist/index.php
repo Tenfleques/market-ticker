@@ -2,6 +2,7 @@
     require_once ("../../functions.php");
     $errors = [];
     $market = [[],[]];
+    $code = 401;
 
     header("Content-Type: application/json; charset=utf-8");
     if(isset($_POST["email"])){
@@ -17,7 +18,10 @@
             && $emailValid == -1
             && $symbolValid == -1){
                 $market = queryHistory($params["company_symbol"], $params["start_date"], $params["end_date"]);
+
+                $code = 200;
         }
+        
         $errors = [
             "date" => ($dateValid == -1)?"ok":FORM_ERRORS[$dateValid],
             "email" => ($emailValid == -1)?"ok":FORM_ERRORS[$emailValid],
@@ -27,11 +31,15 @@
 
         echo json_encode(["errors" => $errors,
                         "chart" => array_values($market[1]),
-                        "market" => array_values($market[0])],JSON_UNESCAPED_UNICODE);
+                        "market" => array_values($market[0]),
+                        "code"=>$code],
+                        JSON_UNESCAPED_UNICODE);
     }else{
         echo json_encode(["errors" => $errors,
                         "chart" => array_values($market[1]),
-                        "market" => array_values($market[0])],JSON_UNESCAPED_UNICODE);
+                        "market" => array_values($market[0]),
+                        "code"=>$code],
+                        JSON_UNESCAPED_UNICODE);
     }
 
     function validDates($sd, $ed){
@@ -127,6 +135,7 @@
         /**
          * collects the csv from quandl.com api based on provided parameters
          */
+        global $code;
         $hist = [];
         $chart = ["Open" => [],
                     "Close" => []];
@@ -143,6 +152,7 @@
             $csv = file($url);
         }catch(Exception $e){
             $error = "not found ".$url;
+            $code = 404;
             return [$hist, $chart, $error];
         } 
 
