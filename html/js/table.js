@@ -76,8 +76,8 @@ function initTable() {
 }
 function loadData(payload){
     var tasks = $.post("/bin/model/getHist/", payload);
+    $(".response-info").addClass("hidden");
     tasks.done(function(data){
-        console.log(data.code)
         if(data.code != 200){
             $(".response-info").removeClass("hidden");
             $(".empty-response").addClass("hidden");
@@ -85,13 +85,12 @@ function loadData(payload){
             $(".response-info").removeClass("hidden");
             $(".error-params").addClass("hidden");
         }
-        
         if(timer){
             clearTimeout(timer); 
         }
         timer = setTimeout(() => {
             $(".response-info").addClass("hidden");
-        }, 10000);
+        }, 5000);
         
         $table.bootstrapTable('load', data["market"]);
         loadChart(data["chart"]);
