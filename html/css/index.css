@@ -145,4 +145,14 @@ pre {
   	display: flex;
   	flex-direction: column;
 }
+.market-chart div.xAxis div.tickLabel { 
+	margin-top: 15px;   
+    transform: rotate(-40deg);
+    -ms-transform:rotate(-40deg); /* IE 9 */
+    -moz-transform:rotate(-40deg); /* Firefox */
+    -webkit-transform:rotate(-40deg); /* Safari and Chrome */
+    -o-transform:rotate(-40deg); /* Opera */
+    /*rotation-point:50% 50%;*/ /* CSS3 */
+    /*rotation:270deg;*/ /* CSS3 */
+}
 /*chart*/

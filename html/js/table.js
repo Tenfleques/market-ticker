@@ -114,15 +114,18 @@ function loadChart(rows){
     };
     var lang = getCookie("lang");
     // localizing labels
+    var opens = rows[0];
+    var closes = rows[1]
 
     var data = [
-        { label: local["open"][lang], color:"green", data: rows[0],lines: {show: true,lineWidth: 1} },
-        { label: local["close"][lang], color:"red", data: rows[1],lines: {show: true,lineWidth: 1} },
+        { label: local["open"][lang], color:"green", data: opens,lines: {show: true,lineWidth: 1} },
+        { label: local["close"][lang], color:"red", data: closes,lines: {show: true,lineWidth: 1} },
         ];
         options = {
             series:{lines:{active:true}, points : {show: true, radius: 1}},
             grid: {hoverable: true,clickable: true},
-            legend:{position:"se"}
+            legend:{position:"se"},
+            xaxis: { mode: "time",timeformat: "%y-%0m-%0d"}
         };
         //load the chart area
         $.plot(".market-chart", data,options);
@@ -143,7 +146,8 @@ function loadChart(rows){
                 var x = item.datapoint[0].toFixed(2),
                     y = item.datapoint[1].toFixed(2);
 
-                $("#tooltip").html(item.series.label + ": " + y)
+                $("#tooltip").html(item.series.label 
+                    + ": " + (new Date(parseInt(x))).formatYYYYMMDD() + " <b>" + y +"</b>")
                     .css({top: item.pageY+5, left: item.pageX+5})
                     .fadeIn(200);
             } else {

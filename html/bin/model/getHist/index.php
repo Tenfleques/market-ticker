@@ -21,7 +21,7 @@
 
                 $code = 200;
         }
-        
+
         $errors = [
             "date" => ($dateValid == -1)?"ok":FORM_ERRORS[$dateValid],
             "email" => ($emailValid == -1)?"ok":FORM_ERRORS[$emailValid],
@@ -167,8 +167,8 @@
                     $record[$keys[$j]] = $row[$j]; 
                 }
                 $hist[] = $record;
-                $chart["Open"][] = [$i-1,floatval($record["Open"])];
-                $chart["Close"][] = [$i-1,floatval($record["Close"])];
+                $chart["Open"][] = [strtotime($record["Date"])*1000,floatval($record["Open"])];
+                $chart["Close"][] = [strtotime($record["Date"])*1000,floatval($record["Close"])];
             }
             ++$i;
         }
